@@ -1,0 +1,19 @@
+---
+
+version: "3"
+
+# see https://taskfile.dev/docs/reference/schema#includes
+includes:
+  default:
+    flatten: true
+    optional: false
+    taskfile: "../tooling/taskfiles/default.yml"
+    namespace: "default"
+
+  terraform:
+    flatten: true
+    optional: false
+    taskfile: "../tooling/taskfiles/terraform.yml"
+    namespace: "terraform"
+
+tasks:
