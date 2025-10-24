@@ -13,7 +13,7 @@ locals {
   hvn_identifier           = "${data.azurerm_resource_group.main.name}-${data.azurerm_resource_group.main.location}"
 }
 
-# see https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/route_table
+# see https://registry.terraform.io/providers/hashicorp/azurerm/4.50.0/docs/resources/route_table
 resource "azurerm_route_table" "main" {
   location            = data.azurerm_resource_group.main.location
   name                = local.azure_network_identifier
@@ -55,7 +55,7 @@ resource "azurerm_virtual_network" "main" {
   resource_group_name = data.azurerm_resource_group.main.name
 }
 
-# see https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/network_security_group
+# see https://registry.terraform.io/providers/hashicorp/azurerm/4.50.0/docs/resources/network_security_group
 resource "azurerm_network_security_group" "main" {
   location            = data.azurerm_resource_group.main.location
   name                = local.azure_network_identifier

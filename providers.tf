@@ -1,4 +1,4 @@
-# see https://registry.terraform.io/providers/hashicorp/azurerm/4.29.0/docs
+# see https://registry.terraform.io/providers/hashicorp/azurerm/4.50.0/docs
 provider "azurerm" {
   features {}
 
@@ -11,14 +11,13 @@ provider "azuread" {
   tenant_id = data.azurerm_subscription.main.tenant_id
 }
 
-
 # The HashiCorp Cloud Platform (HCP) Provider is set to retrieve configuration from the executing environment
 # see https://registry.terraform.io/providers/hashicorp/hcp/latest/docs#authentication
 provider "hcp" {
   # see https://developer.hashicorp.com/terraform/language/block/provider#alias
   alias = "us"
 
-  # use am Admin-level Service Principal for access to HCP Project management features
+  # use an Admin-level Service Principal for access to HCP Project management features
   # see https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/guides/auth#client-credentials
   client_id     = var.hcp_us_admin_id
   client_secret = var.hcp_us_admin_secret
