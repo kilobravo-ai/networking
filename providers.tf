@@ -1,4 +1,4 @@
-# see https://registry.terraform.io/providers/hashicorp/azurerm/4.50.0/docs
+# see https://registry.terraform.io/providers/hashicorp/azurerm/4.61.0/docs
 provider "azurerm" {
   features {}
 
@@ -6,7 +6,7 @@ provider "azurerm" {
   use_cli         = true
 }
 
-# see https://registry.terraform.io/providers/hashicorp/azuread/3.6.0/docs
+# see https://registry.terraform.io/providers/hashicorp/azuread/3.8.0/docs
 provider "azuread" {
   tenant_id = data.azurerm_subscription.main.tenant_id
 }
