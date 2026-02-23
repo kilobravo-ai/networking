@@ -44,7 +44,7 @@ resource "azurerm_virtual_network" "main" {
     for_each = azurerm_network_ddos_protection_plan.main
 
     content {
-      id     = each.value.id
+      id = each.value.id
       # This field is only meaningful when the block exists; keep it tied to the variable.
       enable = var.azurerm_network_ddos_protection_enabled
     }

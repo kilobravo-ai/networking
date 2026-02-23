@@ -64,6 +64,5 @@ variable "hcp_us_hvn_azure_routing_table_cidrs" {
 variable "project_identifier" {
   type        = string
   description = "Project Identifier."
-
-  # the default value for this is set in the `Global` HCP Terraform Variable Set
+  default     = "kilobravo-ai"
 }
